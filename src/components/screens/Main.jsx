@@ -5,6 +5,7 @@ import Lottie from "react-lottie";
 import animationData from "./email.json";
 import SendForm from "./SendForm";
 import { Link } from "react-router-dom";
+import { baseUrl } from "../constants";
 const defaultOptions = {
   loop: true,
   autoplay: true,
@@ -20,7 +21,7 @@ function Main() {
   const [page, setPage] = useState(false);
   const [final, setFinal] = useState("");
   const saveUser = async () => {
-    axios.post("/create_user", { name }).then((response) => {
+    axios.post(baseUrl + "/create_user", { name }).then((response) => {
       setFinal(name);
       console.log(response);
       if (response.status === 200) {

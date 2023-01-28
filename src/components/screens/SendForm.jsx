@@ -6,6 +6,7 @@ import axios from "axios";
 import { AiOutlineDownload } from "react-icons/ai";
 import { v4 as uuidv4 } from "uuid";
 import Sent from "./Sent";
+import { baseUrl } from "../constants";
 function genUUID() {
   return uuidv4();
 }
@@ -28,13 +29,13 @@ function SendForm({ name }) {
   localStorage.setItem("name", location.state.name);
   const fetchAllUsers = async () => {
     await axios
-      .get("./all_users")
+      .get(baseUrl + "/all_users")
       .then((res) => setAllRecipients(res.data))
       .catch((err) => console.log(err));
   };
   const fetchSender = async () => {
     await axios
-      .post("/sender", { senderName: localStorage.getItem("name") })
+      .post(baseUrl + "/sender", { senderName: localStorage.getItem("name") })
       .then((res) => {
         setSenderObject(res.data);
         setSender(res.data[0]["_id"]);
@@ -61,7 +62,7 @@ function SendForm({ name }) {
     //
     // console.log(email_details);
     await axios
-      .post("/reciever-patch", {
+      .post(baseUrl + "/reciever-patch", {
         rec: String(typedReceiver),
         message: email_details,
       })
@@ -86,7 +87,7 @@ function SendForm({ name }) {
     // console.log(email_details);
 
     await axios
-      .patch("/sender-patch", {
+      .patch(baseUrl + "/sender-patch", {
         s: String(email_details.sender),
         message: email_details,
       })
@@ -261,7 +262,9 @@ function SendForm({ name }) {
                             }, 3500);
 
                             await axios
-                              .post("/save_message", { email_details })
+                              .post(baseUrl + "/save_message", {
+                                email_details,
+                              })
                               .then((r) => {
                                 console.log(r);
                               })

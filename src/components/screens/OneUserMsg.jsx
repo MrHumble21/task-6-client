@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { baseUrl } from "../constants";
 
 function OneUserMsg() {
   const { username } = useLocation().state;
@@ -8,7 +9,7 @@ function OneUserMsg() {
   localStorage.setItem("username", username);
   const fetchOneUser = async () => {
     await axios
-      .post("/get_user", { username })
+      .post(baseUrl + "/get_user", { username })
       .then((users) => console.log(users))
       .catch((err) => {
         console.log(err);
