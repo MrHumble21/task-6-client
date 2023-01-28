@@ -129,7 +129,7 @@ function SendForm({ name }) {
           </Container>
         )}
         <Container className="resposive-width d-flex flex-column justify-content-center align-items-center">
-          <div className="w-75">
+          <div className="w-100">
             <div className="alert alert-dismissible alert-light">
               <button
                 type="button"
