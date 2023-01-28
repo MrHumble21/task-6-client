@@ -40,7 +40,7 @@ function Main() {
             <h4 className="text-center">Please write your name in the form!</h4>
             <center>
               <form action="">
-                <div className="form-group w-50">
+                <div className="form-group w-75">
                   <label
                     htmlFor="exampleInputEmail1"
                     className="form-label mt-4"
