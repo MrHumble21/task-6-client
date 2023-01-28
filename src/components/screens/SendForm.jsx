@@ -174,7 +174,7 @@ function SendForm({ name }) {
                         })[0]["Name"]
                       );
                     }}
-                    className="form-control"
+                    className="form-control w-100 w-100 w-100"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
                     placeholder=" Start typing and users will be appeared in the dropdown list "
@@ -217,7 +217,7 @@ function SendForm({ name }) {
                     required
                     type="text"
                     value={title}
-                    className="form-control"
+                    className="form-control w-100 w-100"
                     onChange={(e) => {
                       setTitle(e.target.value);
                     }}
@@ -236,7 +236,7 @@ function SendForm({ name }) {
                     onChange={(e) => {
                       setMessage(e.target.value);
                     }}
-                    className="form-control"
+                    className="form-control w-100 w-100"
                     id="exampleTextarea"
                     rows="3"
                   ></textarea>
