@@ -108,9 +108,10 @@ function SendForm({ name }) {
     status: true,
     custom_id: genUUID(),
   };
+
   return (
     <>
-      <Container className="p-4">
+      <Container className="resposive-width p-4">
         <center>
           <Link to={"/"}>
             <h3>Main page</h3>

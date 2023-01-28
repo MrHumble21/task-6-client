@@ -1,0 +1,5 @@
+ @media (max-width:420) {
+    .resposive-width{
+        width:100% !important;
+    }
+ }
