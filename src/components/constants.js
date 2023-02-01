@@ -1,1 +1,1 @@
-export const baseUrl = "http://task6.mrhumble.uz/";
+export const baseUrl = "http://task6.mrhumble.uz";
