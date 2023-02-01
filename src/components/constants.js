@@ -1,1 +1,1 @@
-export const baseUrl = "https://wicked-outfit-ray.cyclic.app";
+export const baseUrl = "http://task6.mrhumble.uz/";
